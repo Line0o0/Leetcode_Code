@@ -4,9 +4,22 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
-        
         {
-            "name": "Python: 当前文件",
+            "type": "chrome",
+            "request": "attach",
+            "name": "Attach to Chrome",
+            "port": 9222,
+            "webRoot": "${workspaceFolder}/learnJS.js"
+        },
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Launch Chrome",
+            "url": "http://localhost:8080",
+            "webRoot": "${workspaceFolder}/learnJS.js",
+        },
+        {
+            "name": "Python",
             "type": "python",
             "request": "launch",
             "program": "${file}",
@@ -15,11 +28,11 @@
         {
             "type": "node",
             "request": "launch",
-            "name": "Launch Program",
+            "name": "Node",
             "skipFiles": [
                 "<node_internals>/**"
             ],
             "program": "${file}" // just change to this <-  so simple.
-        },
+        }
     ]
 }
